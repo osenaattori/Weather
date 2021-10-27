@@ -34,10 +34,10 @@ font-size: 40px;
 }
 .card-image {
   grid-area: image;
-  background: url("img1.jpg");
+  background: url("img1.gif");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-size: cover;
+  background-size:cover;
 }
 .card-text {
   grid-area: text;
@@ -50,7 +50,7 @@ font-size: 40px;
 }
 .card-text p {
   color: grey;
-  font-size:15px;
+  font-size:18px;
   font-weight: 300;
 }
 .card-text h2 {
@@ -72,7 +72,7 @@ font-size: 40px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: white;
+  color: rgb(143, 16, 16);
 }
 .card-stats .border {
   border-left: 1px solid rgb(172, 26, 87);
