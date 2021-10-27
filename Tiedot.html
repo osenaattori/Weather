@@ -8,6 +8,37 @@
     <title>Tiedot</title>
 </head>
 <body>
+   
+      <script>
+         function showLocation(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            alert("Latituudi: " + latitude + " Longituudi: " + longitude);
+         }
+         function errorHandler(err) {
+            if(err.code == 1) {
+               alert("Virhe: Käyttökielletty!");
+            }
+            else if( err.code == 2) {
+               alert("Virhe:Positio ei ole saatavilla!");
+            }
+         }
+         function getLocation(){
+            if(navigator.geolocation){
+               // timeout at 60000 milliseconds (60 seconds)
+               var options = {timeout:60000};
+               navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+            } else{
+               alert("Selaimesi ei tue geolocaatiota!");
+            }
+         }
+      </script>
+  
+      <form>
+         <input type="button" onclick="getLocation();" value="locaatio"/>
+      </form>
+ 
+
 
 
     <script>
@@ -15,6 +46,7 @@
       document.write(navigator.userAgent + "<br>");
       document.write(navigator.appCodeName + "<br>");
       document.write(navigator.appName + "<br>");
+      document.write(navigator.getCurrentPosition)
 
 
     </script>
